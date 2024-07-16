@@ -11,8 +11,10 @@ filesets:
   rtl-fpga:
     depend:
     - x-heep::packages
+    - pulp-platform.org:ip:fpu_ss
     files:
     - hw/fpga/sram_wrapper.sv
+    - hw/ip_examples/fpu_ss_wrapper/fpu_ss_wrapper.sv
     file_type: systemVerilogSource
 
   ip-fpga:

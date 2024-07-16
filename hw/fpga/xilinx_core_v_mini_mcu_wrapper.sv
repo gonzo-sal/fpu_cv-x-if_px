@@ -92,7 +92,41 @@ module xilinx_core_v_mini_mcu_wrapper
   end
 
   // eXtension Interface
-  if_xif #() ext_if ();
+  if_xif #(
+      .X_NUM_RS(3),
+      .X_ID_WIDTH(4),
+      .X_MEM_WIDTH(32),
+      .X_RFR_WIDTH(32),
+      .X_RFW_WIDTH(32),
+      .X_MISA('0),
+      .X_ECS_XS('0)  // Default value for mstatus.XS
+  ) ext_if ();
+
+
+
+  // Added by Gonzo
+
+  fpu_ss_wrapper #(
+      .PULP_ZFINX(ZFINX),
+      .INPUT_BUFFER_DEPTH(0),
+      .OUT_OF_ORDER(0),
+      .FORWARDING(1),
+      .FPU_FEATURES(fpu_ss_pkg::FPU_FEATURES),
+      .FPU_IMPLEMENTATION(fpu_ss_pkg::FPU_IMPLEMENTATION)
+  ) fpu_ss_wrapper_i (
+      // Clock and reset
+      .clk_i (clk_gen),
+      .rst_ni(rst_n),
+
+      // eXtension Interface
+      .xif_compressed_if(ext_if),
+      .xif_issue_if(ext_if),
+      .xif_commit_if(ext_if),
+      .xif_mem_if(ext_if),
+      .xif_mem_result_if(ext_if),
+      .xif_result_if(ext_if)
+  );
+
 
 `ifdef FPGA_ZCU104
   xilinx_clk_wizard_wrapper xilinx_clk_wizard_wrapper_i (
