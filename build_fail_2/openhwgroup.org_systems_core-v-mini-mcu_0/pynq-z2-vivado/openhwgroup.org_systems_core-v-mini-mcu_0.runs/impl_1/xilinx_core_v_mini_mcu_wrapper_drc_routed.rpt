@@ -1,0 +1,370 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jul 22 13:14:22 2024
+| Host         : gonzo-VirtualBox running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_drc -file xilinx_core_v_mini_mcu_wrapper_drc_routed.rpt -pb xilinx_core_v_mini_mcu_wrapper_drc_routed.pb -rpx xilinx_core_v_mini_mcu_wrapper_drc_routed.rpx
+| Design       : xilinx_core_v_mini_mcu_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 61
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| BUFC-1      | Warning  | Input Buffer Connections                                    | 4          |
+| CHECK-3     | Warning  | Report rule limit reached                                   | 1          |
+| DPIP-1      | Warning  | Input pipelining                                            | 11         |
+| DPOP-1      | Warning  | PREG Output pipelining                                      | 6          |
+| DPOP-2      | Warning  | MREG Output pipelining                                      | 5          |
+| PDRC-153    | Warning  | Gated clock check                                           | 3          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| REQP-1839   | Warning  | RAMB36 async control check                                  | 20         |
+| RPBF-3      | Warning  | IO port buffering is incomplete                             | 8          |
+| ZPS7-1      | Warning  | PS7 block required                                          | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer x_heep_system_i/pad_ring_i/pad_spi_cs_0_i/xilinx_iobuf_i/IBUF (in x_heep_system_i/pad_ring_i/pad_spi_cs_0_i/xilinx_iobuf_i macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#2 Warning
+Input Buffer Connections  
+Input buffer x_heep_system_i/pad_ring_i/pad_spi_flash_cs_0_i/xilinx_iobuf_i/IBUF (in x_heep_system_i/pad_ring_i/pad_spi_flash_cs_0_i/xilinx_iobuf_i macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#3 Warning
+Input Buffer Connections  
+Input buffer x_heep_system_i/pad_ring_i/pad_spi_flash_sck_i/xilinx_iobuf_i/IBUF (in x_heep_system_i/pad_ring_i/pad_spi_flash_sck_i/xilinx_iobuf_i macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#4 Warning
+Input Buffer Connections  
+Input buffer x_heep_system_i/pad_ring_i/pad_spi_sck_i/xilinx_iobuf_i/IBUF (in x_heep_system_i/pad_ring_i/pad_spi_sck_i/xilinx_iobuf_i macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1839 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product input fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product input fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product__0 input fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/ input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i//A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/ input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i//B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0 input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0 input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__1 input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mac input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mac/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mul input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mul/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mul input x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mul/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product output fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product__0 output fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/ output x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0 output x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#5 Warning
+PREG Output pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__1 output x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#6 Warning
+PREG Output pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mac output x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/short_mac/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product multiplier stage fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product__0 multiplier stage fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/ multiplier stage x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i//P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0 multiplier stage x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__1 multiplier stage x_heep_system_i/core_v_mini_mcu_i/cpu_subsystem_i/gen_cv32e40px.cv32e40px_top_i/core_i/ex_stage_i/mult_i/__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net x_heep_system_i/core_v_mini_mcu_i/ao_peripheral_subsystem_i/power_manager_i/power_manager_sequence_periph_reset_i/switch_onoff_signal_q_reg_0 is a gated clock net sourced by a combinational pin x_heep_system_i/core_v_mini_mcu_i/ao_peripheral_subsystem_i/power_manager_i/power_manager_sequence_periph_reset_i/last_data_ws_reg_LDC_i_1/O, cell x_heep_system_i/core_v_mini_mcu_i/ao_peripheral_subsystem_i/power_manager_i/power_manager_sequence_periph_reset_i/last_data_ws_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net xilinx_clk_wizard_wrapper_i/clk_en_reg_1 is a gated clock net sourced by a combinational pin xilinx_clk_wizard_wrapper_i/tc_ram_i_i_1__0/O, cell xilinx_clk_wizard_wrapper_i/tc_ram_i_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net xilinx_clk_wizard_wrapper_i/clka is a gated clock net sourced by a combinational pin xilinx_clk_wizard_wrapper_i/tc_ram_i_i_1/O, cell xilinx_clk_wizard_wrapper_i/tc_ram_i_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT xilinx_clk_wizard_wrapper_i/tc_ram_i_i_1 is driving clock pin of 10 cells. This could lead to large hold time violations. Involved cells are:
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/gen_sram[0].ram_valid_q_reg[0],
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1],
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT xilinx_clk_wizard_wrapper_i/tc_ram_i_i_1__0 is driving clock pin of 10 cells. This could lead to large hold time violations. Involved cells are:
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/gen_sram[1].ram_valid_q_reg[1],
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1],
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram,
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram1_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+Related violations: <none>
+
+REQP-1839#1 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/gen_input_pipeline[0].inp_pipe_tag_q_reg[1][addr][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#2 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/gen_input_pipeline[0].inp_pipe_tag_q_reg[1][addr][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#3 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/gen_input_pipeline[0].inp_pipe_tag_q_reg[1][addr][2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#4 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/gen_input_pipeline[0].inp_pipe_tag_q_reg[1][addr][3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#5 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/gen_input_pipeline[0].inp_pipe_tag_q_reg[1][addr][4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#6 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/gen_input_pipeline[0].inp_pipe_tag_q_reg[1][rd_is_fp]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#7 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[0].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_fma_multi/gen_input_pipeline[0].inp_pipe_valid_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#8 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/FSM_sequential_state_q_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#9 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/FSM_sequential_state_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#10 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/ex2_inst_wb_vld_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#11 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl/FSM_onehot_wb_cur_state_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#12 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl/FSM_onehot_wb_cur_state_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#13 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl/FSM_sequential_fdsu_cur_state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#14 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl/FSM_sequential_fdsu_cur_state_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#15 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl/FSM_sequential_fdsu_cur_state_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#16 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/result_tag_q_reg[addr][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#17 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/result_tag_q_reg[addr][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#18 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (fpu_ss_wrapper_i/fpu_ss_i/i_fpnew_bulk/gen_operation_groups[1].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_divsqrt_multi_th/result_tag_q_reg[addr][2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#19 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/obi_fifo_i/obi_resp_fifo_i/status_cnt_q_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#20 Warning
+RAMB36 async control check  
+The RAMB36E1 x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: x_heep_system_i/core_v_mini_mcu_i/memory_subsystem_i/ram0_i/tc_ram_i/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/obi_fifo_i/producer_state_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port boot_select_i expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#2 Warning
+IO port buffering is incomplete  
+Device port clk_i expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#3 Warning
+IO port buffering is incomplete  
+Device port execute_from_flash_i expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#4 Warning
+IO port buffering is incomplete  
+Device port exit_valid_o expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#5 Warning
+IO port buffering is incomplete  
+Device port jtag_trst_ni expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#6 Warning
+IO port buffering is incomplete  
+Device port rst_i expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#7 Warning
+IO port buffering is incomplete  
+Device port uart_rx_i expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#8 Warning
+IO port buffering is incomplete  
+Device port uart_tx_o expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
