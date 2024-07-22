@@ -110,6 +110,9 @@ module cv32e40px_controller import cv32e40px_pkg::*;
 
   output logic        apu_stall_o,
 
+  // X-IF signals
+  output logic        x_branch_or_async_taken_o,
+
   // jump/branch signals
   input  logic        branch_taken_ex_i,          // branch taken signal from EX ALU
   input  logic [1:0]  ctrl_transfer_insn_in_id_i,               // jump is being calculated in ALU
@@ -327,6 +330,8 @@ module cv32e40px_controller import cv32e40px_pkg::*;
     // ensures that the target is kept constant even if pc_id is no more HWLP_END
     hwlp_targ_addr_o        = ((hwlp_start1_leq_pc && hwlp_end1_geq_pc) && !(hwlp_start0_leq_pc && hwlp_end0_geq_pc)) ? hwlp_start_addr_i[1] : hwlp_start_addr_i[0];
 
+    x_branch_or_async_taken_o = 1'b0;
+
     unique case (ctrl_fsm_cs)
       // We were just reset, wait for fetch_enable
       RESET:
@@ -438,6 +443,8 @@ module cv32e40px_controller import cv32e40px_pkg::*;
             pc_mux_o      = PC_BRANCH;
             pc_set_o      = 1'b1;
 
+            x_branch_or_async_taken_o = 1'b1;
+
             // if we want to debug, flush the pipeline
             // the current_pc_if will take the value of the next instruction to
             // be executed (NPC)
@@ -496,6 +503,7 @@ module cv32e40px_controller import cv32e40px_pkg::*;
                 halt_id_o         = 1'b1;
                 ctrl_fsm_ns       = DBG_FLUSH;
                 debug_req_entry_n = 1'b1;
+                x_branch_or_async_taken_o = 1'b1;
               end
             else if (irq_req_ctrl_i && ~debug_mode_q)
               begin
@@ -511,6 +519,7 @@ module cv32e40px_controller import cv32e40px_pkg::*;
                 exc_pc_mux_o      = EXC_PC_IRQ;
                 exc_cause_o       = irq_id_ctrl_i;
                 csr_irq_sec_o     = irq_sec_ctrl_i;
+                x_branch_or_async_taken_o = 1'b1;
 
                 // IRQ interface
                 irq_ack_o         = 1'b1;
@@ -728,6 +737,7 @@ module cv32e40px_controller import cv32e40px_pkg::*;
                 halt_id_o         = 1'b1;
                 ctrl_fsm_ns       = DBG_FLUSH;
                 debug_req_entry_n = 1'b1;
+                x_branch_or_async_taken_o = 1'b1;
              end
             else if (irq_req_ctrl_i && ~debug_mode_q)
               begin
@@ -743,6 +753,7 @@ module cv32e40px_controller import cv32e40px_pkg::*;
                 exc_pc_mux_o      = EXC_PC_IRQ;
                 exc_cause_o       = irq_id_ctrl_i;
                 csr_irq_sec_o     = irq_sec_ctrl_i;
+                x_branch_or_async_taken_o = 1'b1;
 
                 // IRQ interface
                 irq_ack_o         = 1'b1;
